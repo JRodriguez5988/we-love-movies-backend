@@ -7,7 +7,9 @@ const reviewsRouter = require("./reviews/reviews.router");
 const cors = require("cors")
 
 app.use(express.json());
-app.use(cors())
+app.use(cors({
+    origin: "https://we-love-movies-zu3k.onrender.com"
+}));
 
 app.use("/movies", moviesRouter);
 app.use("/theaters", theatersRouter);
